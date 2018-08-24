@@ -4,7 +4,7 @@ var assert = require('assert');
 
 var renderTokens = require('../render');
 
-var con_Text = require('@trisquel/con-text')();
+var con_Text = require('@triskel/con-text')();
 var preset_statements = require('../preset-statements');
 
 describe('tokens render', function () {

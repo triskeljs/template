@@ -1,16 +1,16 @@
-# @trisquel/template
+# @triskel/template
 
 Simple, customizable template engine for JavaScript
 
 [![ᴋɪʟᴛ ᴊs](https://jesus.germade.es/assets/images/badge-kiltjs.svg)](https://github.com/kiltjs)
-[![](https://img.shields.io/npm/v/@trisquel/template.svg)](https://www.npmjs.com/package/@trisquel/template)
-[![Build Status](https://travis-ci.org/kiltjs/trisquel-template.svg?branch=master)](https://travis-ci.org/kiltjs/trisquel-template)
+[![](https://img.shields.io/npm/v/@triskel/template.svg)](https://www.npmjs.com/package/@triskel/template)
+[![Build Status](https://travis-ci.org/kiltjs/triskel-template.svg?branch=master)](https://travis-ci.org/kiltjs/triskel-template)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ### Installation
 
 ```.sh
-npm install @trisquel/template --save
+npm install @triskel/template --save
 ```
 
 > Example data
@@ -112,10 +112,10 @@ console.log( template('${ person.last_name }: ${ \'greeting\' | message: { name:
 
 ``` js
 var fs = require('fs'),
-    trisquel = require('trisquel');
+    triskel = require('triskel');
 
 var html = fs.readFileSync( 'src/index.html', { encoding: 'utf8' }),
-    renderTemplate = trisquel(html);
+    renderTemplate = triskel(html);
 
 fs.writeFileSync( 'public/index.html' , renderTemplate({
   lang: 'en-US',

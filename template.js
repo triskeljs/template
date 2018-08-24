@@ -1,5 +1,5 @@
 
-var conText = require('@trisquel/con-text'),
+var conText = require('@triskel/con-text'),
     parseTemplate = require('./parser'),
     renderTokens = require('./render'),
     preset_statements = require('./preset-statements');

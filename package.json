@@ -1,5 +1,5 @@
 {
-  "name": "@trisquel/template",
+  "name": "@triskel/template",
   "version": "1.0.2",
   "description": "JS template engine",
   "main": "template.js",
@@ -8,11 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:kiltjs/trisquel.git"
+    "url": "git@github.com:triskel/template.git"
   },
   "keywords": [
     "javascript",
-    "trisquel",
+    "triskel",
     "template",
     "templates",
     "demo"
@@ -20,14 +20,14 @@
   "author": "Jesús Manuel Germade Castiñeiras <jesus@germade.es>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kiltjs/trisquel/issues"
+    "url": "https://github.com/triskel/template/issues"
   },
-  "homepage": "https://github.com/kiltjs/trisquel",
+  "homepage": "https://github.com/triskel/template",
   "devDependencies": {
     "eslint": "5.4.0",
     "mocha": "5.2.0"
   },
   "dependencies": {
-    "@trisquel/con-text": "^0.1.2"
+    "@triskel/con-text": "1.0.0"
   }
 }
