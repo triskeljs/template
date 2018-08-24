@@ -2,6 +2,7 @@
 
 Simple, customizable template engine for JavaScript
 
+[![ᴋɪʟᴛ ᴊs](https://jesus.germade.es/assets/images/badge-kiltjs.svg)](https://github.com/kiltjs)
 [![](https://img.shields.io/npm/v/trisquel.svg)](https://www.npmjs.com/package/trisquel)
 [![Build Status](https://travis-ci.org/kiltjs/trisquel.svg?branch=master)](https://travis-ci.org/kiltjs/trisquel)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
@@ -18,7 +19,7 @@ npm install @trisquel/template --save
 var data = {
   foo: 'bar',
   crash: {
-    test: 'dummy'ç
+    test: 'dummy'
   },
   list: ['foo', 'bar', 'foobar'],
   map: {
