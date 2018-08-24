@@ -1,10 +1,10 @@
-# trisquel
+# @trisquel/template
 
 Simple, customizable template engine for JavaScript
 
 [![ᴋɪʟᴛ ᴊs](https://jesus.germade.es/assets/images/badge-kiltjs.svg)](https://github.com/kiltjs)
-[![](https://img.shields.io/npm/v/trisquel.svg)](https://www.npmjs.com/package/trisquel)
-[![Build Status](https://travis-ci.org/kiltjs/trisquel.svg?branch=master)](https://travis-ci.org/kiltjs/trisquel)
+[![](https://img.shields.io/npm/v/@trisquel/template.svg)](https://www.npmjs.com/package/@trisquel/template)
+[![Build Status](https://travis-ci.org/kiltjs/trisquel-template.svg?branch=master)](https://travis-ci.org/kiltjs/trisquel-template)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ### Installation
