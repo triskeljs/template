@@ -2,7 +2,7 @@
   "name": "@trisquel/template",
   "version": "1.0.1",
   "description": "JS template engine",
-  "main": "dist/trisquel.js",
+  "main": "template.js",
   "scripts": {
     "test": "make test"
   },

@@ -69,3 +69,105 @@ describe('parsing', function () {
   });
 
 });
+
+describe('throws: Unexpected close token', function () {
+
+  it('lonely close', function () {
+
+    assert.throws(function () {
+
+      parseTemplate(' {/} ');
+
+    }, /Unexpected close token/);
+
+  });
+
+  it('closing twice', function () {
+
+    assert.throws(function () {
+
+      parseTemplate(' $if{ foo } bar {/} {/} ');
+
+    }, /Unexpected close token/);
+
+  });
+
+  it('closing 3 times', function () {
+
+    assert.throws(function () {
+
+      parseTemplate(' $if{ foo } bar {/} {/} {/} ');
+
+    }, /Unexpected close token/);
+
+  });
+
+});
+
+describe('throws: Unexpected close token {/}', function () {
+
+  it('lonely close', function () {
+
+    assert.throws(function () {
+
+      parseTemplate(' {/} ');
+
+    }, /Unexpected close token {\/}/);
+
+  });
+
+  it('closing twice', function () {
+
+    assert.throws(function () {
+
+      parseTemplate(' $if{ foo } bar {/} {/} ');
+
+    }, /Unexpected close token {\/}/);
+
+  });
+
+  it('closing 3 times', function () {
+
+    assert.throws(function () {
+
+      parseTemplate(' $if{ foo } bar {/} {/} {/} ');
+
+    }, /Unexpected close token {\/}/);
+
+  });
+
+});
+
+describe('throws: Unexpected close token {foo/}', function () {
+
+  it('lonely close', function () {
+
+    assert.throws(function () {
+
+      parseTemplate(' {foo/} ');
+
+    }, /Unexpected close token {foo\/}/);
+
+  });
+
+  it('closing twice', function () {
+
+    assert.throws(function () {
+
+      parseTemplate(' $if{ foo } bar {if/} {foo/} ');
+
+    }, /Unexpected close token {foo\/}/);
+
+  });
+
+  it('closing 3 times', function () {
+
+    assert.throws(function () {
+
+      parseTemplate(' $if{ foo } bar {if/} {foo/} {bar/} ');
+
+    }, /Unexpected close token {foo\/}/);
+
+  });
+
+});

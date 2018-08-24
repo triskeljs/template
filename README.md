@@ -18,7 +18,7 @@ npm install @trisquel/template --save
 var data = {
   foo: 'bar',
   crash: {
-    test: 'dummy'
+    test: 'dummy'ç
   },
   list: ['foo', 'bar', 'foobar'],
   map: {
@@ -79,7 +79,7 @@ console.log( template('${ person.last_name }: ${ \'greeting\' | message: { name:
 
 #### HTML Example
 
-> src/index.html
+> [tests/example.html](./tests/example.html)
 
 ``` html
 <!DOCTYPE html>
@@ -107,7 +107,7 @@ console.log( template('${ person.last_name }: ${ \'greeting\' | message: { name:
 </html>
 ```
 
-> processing HTML
+> processing HTML ([template TESTS](./tests/template-tests.js))
 
 ``` js
 var fs = require('fs'),
@@ -141,7 +141,7 @@ fs.writeFileSync( 'public/index.html' , renderTemplate({
 
 ```
 
-> Resulting HTML (public/index.html)
+> Resulting HTML ([tests/example-result.html](./tests/example-result.html))
 
 ``` html
 <!DOCTYPE html>
@@ -170,12 +170,11 @@ fs.writeFileSync( 'public/index.html' , renderTemplate({
     <li>Donec quis dui at dolor tempor interdum.</li>
   </ul>
 
-
-    <script type="application/javascript">
+  <script type="application/javascript">
     (function (h,s) {
     s.type='text/javascript';s.src='//' + location.hostname + ':35729/livereload.js';h.appendChild(s);
     })(document.getElementsByTagName('head')[0], document.createElement('script') );
-    </script>
+  </script>
 
   </body>
 </html>
