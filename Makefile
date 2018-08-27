@@ -18,7 +18,8 @@ test: install eslint
 npm.publish:
 	git pull --tags
 	npm version patch
-	git push origin $(git_branch) && git push --tags
+	git push origin $(git_branch)
+	git push --tags
 	npm publish --access public
 
 github.release: export REPOSITORY=triskel/template
