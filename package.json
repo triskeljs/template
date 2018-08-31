@@ -1,6 +1,6 @@
 {
   "name": "@triskel/template",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "JS template engine",
   "main": "template.js",
   "scripts": {
@@ -28,6 +28,6 @@
     "mocha": "5.2.0"
   },
   "dependencies": {
-    "@triskel/con-text": "1.0.0"
+    "@triskel/con-text": "1.0.2"
   }
 }
