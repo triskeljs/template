@@ -28,6 +28,6 @@
     "mocha": "5.2.0"
   },
   "dependencies": {
-    "@triskel/con-text": "1.0.2"
+    "@triskel/con-text": "1.0.3"
   }
 }
