@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:triskel/template.git"
+    "url": "git@github.com:triskeljs/template.git"
   },
   "keywords": [
     "javascript",
@@ -20,14 +20,14 @@
   "author": "Jesús Manuel Germade Castiñeiras <jesus@germade.es>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/triskel/template/issues"
+    "url": "https://github.com/triskeljs/template/issues"
   },
-  "homepage": "https://github.com/triskel/template",
+  "homepage": "https://github.com/triskeljs/template",
   "devDependencies": {
-    "eslint": "5.4.0",
+    "eslint": "5.7.0",
     "mocha": "5.2.0"
   },
   "dependencies": {
-    "@triskel/con-text": "1.0.3"
+    "@triskel/con-text": "1.0.8"
   }
 }
