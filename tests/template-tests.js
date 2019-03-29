@@ -1,24 +1,24 @@
 /* global describe, it */
 
-var assert = require('assert');
+var assert = require('assert')
 
-var template = require('../template');
+var template = require('../template')
 
 describe('template (parsing/rendering)', function () {
 
   it('1 level', function () {
 
-    assert.strictEqual( template('foo ${ foobar } bar', { foobar: 'gogogo' }) , 'foo gogogo bar' );
+    assert.strictEqual( template('foo ${ foobar } bar', { foobar: 'gogogo' }) , 'foo gogogo bar' )
 
-  });
+  })
 
   it('2nd level', function () {
 
-    assert.strictEqual( template('foo $if{ foobar }gogogo{/} bar', { foobar: true }) , 'foo gogogo bar' );
+    assert.strictEqual( template('foo $if{ foobar }gogogo{/} bar', { foobar: true }) , 'foo gogogo bar' )
 
-    assert.strictEqual( template('foo $if{ foobar }gogogo{/} bar', { foobar: false }) , 'foo  bar' );
+    assert.strictEqual( template('foo $if{ foobar }gogogo{/} bar', { foobar: false }) , 'foo  bar' )
 
-  });
+  })
 
   it('preset each Array', function () {
 
@@ -28,7 +28,7 @@ describe('template (parsing/rendering)', function () {
         'test',
         'dummy',
       ]
-    }) , 'foo 0: crash, 1: test, 2: dummy,  bar', 'String list' );
+    }) , 'foo 0: crash, 1: test, 2: dummy,  bar', 'String list' )
 
     assert.strictEqual( template('foo $each{ foo in foobar }${ $index }: ${ foo.foo }, {/} bar', {
       foobar: [
@@ -36,7 +36,7 @@ describe('template (parsing/rendering)', function () {
         { foo: 'test' },
         { foo: 'dummy' },
       ]
-    }) , 'foo 0: crash, 1: test, 2: dummy,  bar', 'Objects list' );
+    }) , 'foo 0: crash, 1: test, 2: dummy,  bar', 'Objects list' )
 
     assert.strictEqual( template('foo $each{ foo in foobar }$if{ $index }, {/}${ $index }: ${ foo }{/} bar', {
       foobar: [
@@ -44,9 +44,9 @@ describe('template (parsing/rendering)', function () {
         'test',
         'dummy',
       ]
-    }) , 'foo 0: crash, 1: test, 2: dummy bar', 'String list better commas' );
+    }) , 'foo 0: crash, 1: test, 2: dummy bar', 'String list better commas' )
 
-  });
+  })
 
   it('preset each Object (map)', function () {
 
@@ -56,8 +56,8 @@ describe('template (parsing/rendering)', function () {
         bar: 'test',
         foobar: 'dummy',
       }
-    }) , 'foo foo: crash, bar: test, foobar: dummy,  bar' );
+    }) , 'foo foo: crash, bar: test, foobar: dummy,  bar' )
 
-  });
+  })
 
-});
+})

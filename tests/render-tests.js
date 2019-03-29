@@ -1,11 +1,11 @@
 /* global describe, it */
 
-var assert = require('assert');
+var assert = require('assert')
 
-var renderTokens = require('../render');
+var renderTokens = require('../render')
 
-var con_Text = require('@triskel/con-text')();
-var preset_statements = require('../preset-statements');
+var con_Text = require('@triskel/con-text')()
+var preset_statements = require('../preset-statements')
 
 describe('tokens render', function () {
 
@@ -15,9 +15,9 @@ describe('tokens render', function () {
       'foo ',
       { $$: 'foobar' },
       ' bar'
-    ], { foobar: 'gogogo' }) , 'foo gogogo bar' );
+    ], { foobar: 'gogogo' }) , 'foo gogogo bar' )
 
-  });
+  })
 
   it('2nd level', function () {
 
@@ -25,15 +25,15 @@ describe('tokens render', function () {
       'foo ',
       { $: 'if', $$: 'foobar', _: 'gogogo' },
       ' bar'
-    ], { foobar: true }, preset_statements) , 'foo gogogo bar' );
+    ], { foobar: true }, preset_statements) , 'foo gogogo bar' )
 
     assert.strictEqual( renderTokens(con_Text, [
       'foo ',
       { $: 'if', $$: 'foobar', _: 'gogogo' },
       ' bar'
-    ], { foobar: false }, preset_statements) , 'foo  bar' );
+    ], { foobar: false }, preset_statements) , 'foo  bar' )
 
-  });
+  })
 
   it('preset each Array', function () {
 
@@ -49,7 +49,7 @@ describe('tokens render', function () {
       'crash',
       'test',
       'dummy',
-    ] }, preset_statements) , 'foo 0: crash, 1: test, 2: dummy,  bar', 'String list' );
+    ] }, preset_statements) , 'foo 0: crash, 1: test, 2: dummy,  bar', 'String list' )
 
     assert.strictEqual( renderTokens(con_Text, [
       'foo ',
@@ -63,7 +63,7 @@ describe('tokens render', function () {
       { foo: 'crash' },
       { foo: 'test' },
       { foo: 'dummy' },
-    ] }, preset_statements) , 'foo 0: crash, 1: test, 2: dummy,  bar', 'Objects list' );
+    ] }, preset_statements) , 'foo 0: crash, 1: test, 2: dummy,  bar', 'Objects list' )
 
     assert.strictEqual( renderTokens(con_Text, [
       'foo ',
@@ -77,9 +77,9 @@ describe('tokens render', function () {
       'crash',
       'test',
       'dummy',
-    ] }, preset_statements) , 'foo 0: crash, 1: test, 2: dummy bar', 'String list better commas' );
+    ] }, preset_statements) , 'foo 0: crash, 1: test, 2: dummy bar', 'String list better commas' )
 
-  });
+  })
 
   it('preset each Object (map)', function () {
 
@@ -95,8 +95,8 @@ describe('tokens render', function () {
       foo: 'crash',
       bar: 'test',
       foobar: 'dummy',
-    } }, preset_statements) , 'foo foo: crash, bar: test, foobar: dummy,  bar' );
+    } }, preset_statements) , 'foo foo: crash, bar: test, foobar: dummy,  bar' )
 
-  });
+  })
 
-});
+})

@@ -1,12 +1,12 @@
 /* global describe, it */
 
-var assert = require('assert');
-var template = require('../template');
+var assert = require('assert')
+var template = require('../template')
 
-const FS = require('fs');
+const FS = require('fs')
 
-var example_html = FS.readFileSync('tests/example.html', 'utf8');
-var example_result_html = FS.readFileSync('tests/example-result.html', 'utf8');
+var example_html = FS.readFileSync('tests/example.html', 'utf8')
+var example_result_html = FS.readFileSync('tests/example-result.html', 'utf8')
 
 var data = {
   lang: 'en-US',
@@ -29,15 +29,15 @@ var data = {
     'Cras iaculis ultricies nulla.',
     'Donec quis dui at dolor tempor interdum.',
   ]
-};
+}
 
 describe('README', function () {
 
   it('example', function () {
 
-    assert.strictEqual( template(example_html, data), example_result_html );
-    assert.strictEqual( template(example_html)(data), example_result_html );
+    assert.strictEqual( template(example_html, data), example_result_html )
+    assert.strictEqual( template(example_html)(data), example_result_html )
 
-  });
+  })
 
-});
+})
