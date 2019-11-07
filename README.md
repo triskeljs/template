@@ -2,7 +2,7 @@
 
 Simple, customizable template engine for JavaScript, based on [@triskeljs/con-text](https://github.com/triskeljs/con-text)
 
-[![ᴋɪʟᴛ ᴊs](https://jesus.germade.es/assets/images/badge-kiltjs.svg)](https://github.com/kiltjs)
+[![ᴋɪʟᴛ ᴊs](https://jesus.germade.dev/assets/images/badge-kiltjs.svg)](https://github.com/kiltjs)
 [![](https://img.shields.io/npm/v/@triskel/template.svg?maxAge=1200)](https://www.npmjs.com/package/@triskel/template)
 [![Build Status](https://travis-ci.org/triskeljs/template.svg?branch=master)](https://travis-ci.org/triskeljs/template)
 [![dependencies Status](https://david-dm.org/triskeljs/template/status.svg)](https://david-dm.org/triskeljs/template)
