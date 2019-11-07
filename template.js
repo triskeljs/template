@@ -1,5 +1,5 @@
 
-var conText = require('@triskel/con-text'),
+var ConText = require('@triskel/con-text').ConText,
     parseTemplate = require('./parser'),
     renderTokens = require('./render'),
     preset_statements = require('./preset-statements')
@@ -14,7 +14,7 @@ function _compileTemplate(con_Text, statements, self_closed_statements, template
 
 function createTemplateContext () {
 
-  var con_Text = conText()
+  var con_Text = new ConText()
   var templates_cache = {}
 
   var statements = Object.create(preset_statements)

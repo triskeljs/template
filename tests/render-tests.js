@@ -4,8 +4,10 @@ var assert = require('assert')
 
 var renderTokens = require('../render')
 
-var con_Text = require('@triskel/con-text')()
+var ConText = require('@triskel/con-text').ConText
 var preset_statements = require('../preset-statements')
+
+var con_Text = new ConText()
 
 describe('tokens render', function () {
 
